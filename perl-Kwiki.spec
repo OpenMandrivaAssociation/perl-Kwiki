@@ -1,15 +1,13 @@
 %define upstream_name	 Kwiki
-%define upstream_version 0.39
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.39
+Release:	6
 
 Summary:	The Kwiki Wiki Building Framework 
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Kwiki
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Kwiki/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ Wiki. A Wiki allows users to freely create and edit web pages in any web
 browser. Kwiki is Open Source Software in Perl, and is available on CPAN.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
